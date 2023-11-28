@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asteroids</title>
+
+    <link rel="stylesheet" href="styles.css">
+    <script src="scripts/main.js" defer type="module"></script>
+</head>
+<body>
+    <main id="appContainer">
+        <div id="userContainer">
+            <label for="inputName">Nickname</label>
+            <input id="inputName" type="text" placeholder="Type here..." />
+            <button id="startGame" disabled>Start Game</button>
+        </div>
+    
+        <div id="leaderboardContainer">
+            <h1 id="leaderboardHeader">Leaderboard</h1>
+
+            <h3 id="noScores">There are no scores registered 🔎</h3>
+    
+            <ul id="leaderboardList"></ul>
+        </div>
+    
+        <div id="gameContainer">
+            <div id="btnControl">
+                <button id="newGame">New game</button>
+                <button id="quitGame">Quit</button>
+            </div>
+
+            <h1 id="username"></h1>
+
+            <div id="gameHeader">
+                <h2>Score: <span id="score"></span></h2>
+                <h2>Lives: <span class="heart"></span>
+                           <span class="heart"></span>
+                           <span class="heart"></span>
+                </h2>
+            </div>
+    
+            <canvas id="game"></canvas>
+        </div>
+    </main>
+</body>
+</html>

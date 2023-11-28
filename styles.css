@@ -1,0 +1,142 @@
+body{
+    margin: 0;
+    background-color: rgb(36, 36, 36);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    width: 100vw;
+}
+
+#appContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#userContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#userContainer > *, #leaderboardContainer, #gameContainer > *{
+    width: 500px;
+}
+
+#inputName{
+    padding: 0.3rem 0;
+    margin-top: 0.2rem;
+    background-color: rgb(57, 56, 56);
+    color: white;
+}
+
+#startGame{
+    margin-top: 1rem;
+    padding: 0.5rem 0;
+    cursor: pointer;
+    background-color: blue;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 18px;
+    font-weight: bolder;
+}
+
+#startGame:hover{
+    background-color: rgb(22, 22, 229);
+}
+
+#startGame:disabled{
+    cursor: not-allowed;
+    background-color: lightgray;
+    color: rgb(124, 122, 122);
+}
+
+#leaderboardHeader{
+    margin-bottom: -1rem;
+}
+
+#leaderboardList{
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0;
+}
+
+.leaderboardItem{
+    padding: 3px 0;
+    margin: 0;
+}
+
+#gameContainer{
+    display: none;
+}
+
+#btnControl{
+    justify-content: center;
+    align-items: center;
+    gap: 10vw;
+    display: none;
+}
+
+#btnControl > #newGame, #btnControl > #quitGame{
+    width: 25vw;
+    max-width: 200px;
+    color: white;
+    border: none;
+    padding: 0.8rem 0;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+#newGame{
+    background-color: green;
+}
+
+#newGame:hover{
+    background-color: rgb(1, 85, 1);
+    cursor: pointer;
+}
+
+#quitGame{
+    background-color: red;
+}
+
+#quitGame:hover{
+    background-color: rgb(170, 2, 2);
+    cursor: pointer;
+}
+
+#username{
+    text-align: center;
+    margin: 0;
+    font-size: 24px;
+}
+
+#gameHeader{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.heart{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-color: red;
+    clip-path: polygon(50% 0%, 100% 35%, 75% 100%, 50% 70%, 25% 100%, 0% 35%);
+    transform: translateY(4px);
+}
+
+#game{
+    background-color: black;
+    border: 2px solid lightgray;
+}
+
+@media (max-width: 700px) {
+    #userContainer > *, #leaderboardContainer, #gameContainer > * {
+        width: 300px;
+    }
+}
